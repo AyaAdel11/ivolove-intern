@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.13.2'
+   // testImplementation 'junit:junit:4.13.2'
 }
 
 jar {
@@ -24,8 +24,7 @@ jar {
             'Main-Class': 'com.ivolve.App'
         )
     }
-    archiveBaseName.set("ivolve-app")
-    archiveVersion.set("")
-    archiveClassifier.set("")
+    baseName = 'ivolve-app'
+    version = ''
 }
 
