@@ -1,0 +1,2 @@
+APP-MODE=staging
+APP-REGION=us-west
