@@ -41,6 +41,6 @@ Inspect Logs: ```bash docker run --rm -v nginx_logs:/logs busybox ls /logs ```
 docker rm -f nginx-lab7
 docker volume rm nginx_logs
 ```
-![image](../Lab5/screenshots/lab7.png)
+![image](./lab7.png)
 
 ---
