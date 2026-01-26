@@ -10,7 +10,7 @@ This lab demonstrates how to manage environment variables in a Dockerized Flask 
 
 ## Running Containers (3 Scenarios)
 
-![Image](./screenshots/lab6/run.png)
+![Image](./screenshots/lab6/runt.png)
 
 ### Scenario I: Direct Environment Variables (Development)
 Passing variables directly using the -e flag.
