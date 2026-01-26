@@ -9,3 +9,4 @@ This repository contains my progress in the DevOps internship.
 4. **[Lab 4: Optimized Containerization](./Docker/Lab4/README.md)** - Single-stage builds using lightweight Java runtime images.
 5. **[Lab 5: Multi-Stage Build Strategy](./Docker/Lab5/README.md)** - Professional Docker optimization for production-ready Spring Boot apps.
 6. **[Lab 6: Managing Docker Environment Variables](./Docker/Lab6/README.md)** - Managing Docker Environment Variables.
+7. **[Lab 7: Docker Volume and Bind Mount with Nginx](./Docker/Lab7/README.md)** 
