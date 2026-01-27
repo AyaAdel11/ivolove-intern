@@ -21,7 +21,7 @@ Run the following command to build the app image and start both services in deta
 ```bash
 docker-compose up -d
 ```
-![Verification](../screenshots/compose-up.png)
+![Verification](./screenshots/compose-up.png)
 
 ### 2. Verification & Health Checks
 I verified the application's status and its connection to the database using the following endpoints:
@@ -30,7 +30,7 @@ Health Check: curl localhost:3000/health (Checks if the server is running).
 
 Ready Check: curl localhost:3000/ready (Checks if the DB connection is established).
 
-![Verification](../screenshots/varify-everything.png)
+![Verification](./screenshots/varify-everything.png)
 
 ### 3. Monitoring Logs
 Checked the access logs generated inside the container to monitor incoming requests:
@@ -39,11 +39,11 @@ Checked the access logs generated inside the container to monitor incoming reque
 docker-compose exec app cat /app/logs/access.log
 ```
 
-![Verification](../screenshots/varify-everything.png)
+![Verification](./screenshots/varify-everything.png)
 
 ### 4. Push the Docker image into your DockerHub
 
-![Verification](../screenshots/push.png)
+![Verification](./screenshots/push.png)
 
 ---
 
