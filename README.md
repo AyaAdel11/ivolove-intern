@@ -12,3 +12,5 @@ This repository contains my progress in the DevOps internship.
 7. **[Lab 7: Docker Volume and Bind Mount with Nginx](./Docker/Lab7/README.md)** 
 8. **[Lab 8: Docker Networking & Inter-Container Communication](./Docker/Lab8/README.md)** - Connecting multiple containers in a dedicated bridge network.
 9. **[Lab 9: Containerized Node.js and MySQL Stack Using Docker Compose](./Docker/Lab9/README.md)** - Full-stack orchestration with persistence, health checks, and logging.
+10. **[Lab 10: Node Isolation Using Taints in Kubernetes](./K8s/Lab10/README.md)** - Controlling pod scheduling and isolating nodes using Taints and Tolerations.
+11. **[Lab 11: Namespace Management & Resource Quotas](./K8s/Lab11/README.md)** - Implementing multi-tenancy and enforcing resource limits to prevent cluster exhaustion.
