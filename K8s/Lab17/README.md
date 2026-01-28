@@ -15,6 +15,6 @@ Requests (Minimum Guaranteed): 1 vCPU and 1Gi Memory.
 
 Limits (Hard Ceiling): 2 vCPUs and 2Gi Memory.
 
-![Task Proof](./screenshots/varify.png)
+![Task Proof](./screenshots/resources.png)
 
 ---
