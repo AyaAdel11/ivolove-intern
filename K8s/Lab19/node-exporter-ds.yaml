@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment # (Note: The lab asks for DaemonSet)
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: node-exporter
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: node-exporter
+  template:
+    metadata:
+      labels:
+        app: node-exporter
+    spec:
+      # السماح للـ Pod بالنزول على أي Node مهما كان الـ Taint بتاعها
+      tolerations:
+      - operator: Exists
+      containers:
+      - name: node-exporter
+        image: prom/node-exporter:v1.3.1
+        ports:
+        - containerPort: 9100
+          hostPort: 9100  # لفتح البورت مباشرة على الـ Node
