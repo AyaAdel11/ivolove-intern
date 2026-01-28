@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-app-v3
+  namespace: ivolve
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-v3
+  template:
+    metadata:
+      labels:
+        app: nodejs-v3
+    spec:
+      tolerations:
+      - key: "node"
+        operator: "Equal"
+        value: "worker"
+        effect: "NoSchedule"
+      initContainers:
+      - name: init-db
+        image: mysql:5.7
+        env:
+        - name: MYSQL_PWD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: MYSQL_ROOT_PASSWORD
+        command: ["/bin/bash", "-c", "mysql -h mysql-0.mysql-headless -u root -e 'SELECT 1'"]
+      containers:
+      - name: nodejs-container
+        image: ayaadel02/node-app:v1.0
+        resources:
+          requests:
+            cpu: "1"
+            memory: "1Gi"
+          limits:
+            cpu: "2"
+            memory: "2Gi"
+        env:
+        - name: DB_HOST
+          value: "mysql-headless"
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: MYSQL_ROOT_PASSWORD
