@@ -30,7 +30,7 @@ Successfully confirmed that metrics are exposed by accessing the endpoint from w
 ```bash
 minikube ssh "curl localhost:9100/metrics"
 ```
-![Task Proof](./screenshots/varify.png)
+![Task Proof](./screenshots/Varify.png)
 
 ## 📊 Sample Output (Captured Metrics):
 
