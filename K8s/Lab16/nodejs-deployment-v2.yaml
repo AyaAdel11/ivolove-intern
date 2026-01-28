@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-app-v2
+  namespace: ivolve
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-v2
+  template:
+    metadata:
+      labels:
+        app: nodejs-v2
+    spec:
+      tolerations:
+      - key: "node"
+        operator: "Equal"
+        value: "worker"
+        effect: "NoSchedule"
+      initContainers:
+      - name: init-db
+        image: mysql:5.7
+        env:
+        - name: MYSQL_PWD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: MYSQL_ROOT_PASSWORD
+        command:
+        - "/bin/bash"
+        - "-c"
+        - |
+          until mysql -h mysql-0.mysql-headless -u root -e "select 1"; do
+            echo "Waiting for MySQL...";
+            sleep 2;
+          done;
+          mysql -h mysql-0.mysql-headless -u root -e "CREATE DATABASE IF NOT EXISTS ivolve; CREATE USER IF NOT EXISTS 'ivolve_user'@'%' IDENTIFIED BY 'password123'; GRANT ALL PRIVILEGES ON ivolve.* TO 'ivolve_user'@'%'; FLUSH PRIVILEGES;"
+      containers:
+      - name: nodejs-container
+        image: ayaadel02/node-app:v1.0
+        env:
+        - name: DB_HOST
+          value: "mysql-headless"
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: MYSQL_ROOT_PASSWORD
+        volumeMounts:
+        - name: app-storage
+          mountPath: /app/logs
+      volumes:
+      - name: app-storage
+        persistentVolumeClaim:
+          claimName: app-logs-pvc
