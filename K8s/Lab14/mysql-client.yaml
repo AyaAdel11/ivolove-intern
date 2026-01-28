@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-client
+  namespace: ivolve
+spec:
+  tolerations:
+  - key: "node"
+    operator: "Equal"
+    value: "worker"
+    effect: "NoSchedule"
+  containers:
+  - name: mysql-client
+    image: mysql:5.7
+    command: ["/bin/sh", "-c", "sleep 3600"]
