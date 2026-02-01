@@ -25,3 +25,19 @@ This repository contains my comprehensive progress during the DevOps internship,
 18. **[Lab 18: Pod-to-Pod Traffic Control](./K8s/Lab18/README.md)** - Securing network communication between services using Network Policies.
 19. **[Lab 19: DaemonSets for Monitoring](./K8s/Lab19/README.md)** - Deploying node-level agents (Prometheus Node Exporter) across the entire cluster.
 20. **[Lab 20: RBAC & Service Accounts](./K8s/Lab20/README.md)** - Implementing Role-Based Access Control to secure cluster resources.
+
+## Continues Integration / Continues Delivery
+21. **[Lab 21: Role-Based Authorization](./Jenkins/Lab21/README.md)** - Implementing RBAC with Admin and Read-only roles in Jenkins.
+22. **[Lab 22: CI/CD Pipeline for App Deployment](./Jenkins/Lab22/README.md)** - Automating Build, Dockerization, and K8s deployment with Pipeline post-actions.
+23. **[Lab 23: Jenkins Shared Libraries & Agents](./Jenkins/Lab23/README.md)** - Scaling pipelines using modular Shared Libraries and distributed Jenkins Slaves.
+24. **[ Lab 24: Multi-branch CI/CD Workflow](./Jenkins/Lab24/README.md)** - Automated environment-based deployment (Dev/Staging/Prod) using Multibranch Pipelines.
+
+## GitOps with ArgoCD
+Lab 25: GitOps Workflow with ArgoCD - Implementing continuous delivery by synchronizing K8s cluster state with GitHub via ArgoCD.
+
+## Ansible Automation 
+Lab 26: Ansible Configuration & Ad-Hoc - Control node setup, SSH key management, and executing ad-hoc commands.
+Lab 27: Web Server Automation - Writing playbooks to automate Nginx installation and configuration.
+Lab 28: Configuration Management with Roles - Creating structured roles for Docker, Kubectl, and Jenkins installation.
+Lab 29: Ansible Vault & Database Automation - Automating MySQL setup and securing sensitive credentials with Ansible Vault.
+Lab 30: Dynamic Inventory with AWS - Automated host discovery for EC2 instances using Dynamic Inventory and AWS tags.
