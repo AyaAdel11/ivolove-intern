@@ -55,4 +55,4 @@ Connection Refused: Resolved by ensuring minikube start --driver=docker was runn
 Dynamic Tagging: Used sed to automate image versioning, ensuring the cluster always runs the latest build.
 
 ## 🖼️ Pipeline Execution
-![Pipeline Status](./pipeline.png)
+![Pipeline Status](./screenshots/pipeline.png)
