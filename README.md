@@ -33,11 +33,11 @@ This repository contains my comprehensive progress during the DevOps internship,
 24. **[ Lab 24: Multi-branch CI/CD Workflow](./Jenkins/Lab24/README.md)** - Automated environment-based deployment (Dev/Staging/Prod) using Multibranch Pipelines.
 
 ## GitOps with ArgoCD
-Lab 25: GitOps Workflow with ArgoCD - Implementing continuous delivery by synchronizing K8s cluster state with GitHub via ArgoCD.
+25. **[Lab 25: GitOps Workflow with ArgoCD](./ArgoCd/README.md)** - Implementing continuous delivery by synchronizing K8s cluster state with GitHub via ArgoCD.
 
 ## Ansible Automation 
-Lab 26: Ansible Configuration & Ad-Hoc - Control node setup, SSH key management, and executing ad-hoc commands.
-Lab 27: Web Server Automation - Writing playbooks to automate Nginx installation and configuration.
-Lab 28: Configuration Management with Roles - Creating structured roles for Docker, Kubectl, and Jenkins installation.
-Lab 29: Ansible Vault & Database Automation - Automating MySQL setup and securing sensitive credentials with Ansible Vault.
-Lab 30: Dynamic Inventory with AWS - Automated host discovery for EC2 instances using Dynamic Inventory and AWS tags.
+26. **[Lab 26: Ansible Configuration & Ad-Hoc](./Ansible/Lab26/README.md)** - Control node setup, SSH key management, and executing ad-hoc commands.
+27. **[Lab 27: Web Server Automation](./Ansible/Lab27/README.md)** - Writing playbooks to automate Nginx installation and configuration.
+28. **[Lab 28: Configuration Management with Roles](./Ansible/Lab28/README.md)** - Creating structured roles for Docker, Kubectl, and Jenkins installation.
+29. **[Lab 29: Ansible Vault & Database Automation](./Ansible/Lab29/README.md)** - Automating MySQL setup and securing sensitive credentials with Ansible Vault.
+30. **[Lab 30: Dynamic Inventory with AWS](./Ansible/Lab30/README.md)** - Automated host discovery for EC2 instances using Dynamic Inventory and AWS tags.
