@@ -1,0 +1,36 @@
+---
+- name: Configure Nginx Web Server
+  hosts: my_nodes
+  become: yes  # عشان نستخدم صلاحيات الـ sudo لتثبيت البرامج
+
+  tasks:
+    - name: Update apt cache (Optional but recommended)
+      apt:
+        update_cache: no 
+        cache_valid_time: 3600
+
+    - name: Install Nginx server
+      apt:
+        name: nginx
+        state: present
+
+    - name: Create a custom landing page
+      copy:
+        content: |
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <title>Ansible Lab 27</title>
+          </head>
+          <body>
+              <h1>Success!</h1>
+              <p>This page was deployed automatically by Ansible on Localhost.</p>
+          </body>
+          </html>
+        dest: /var/www/html/index.html
+
+    - name: Start and Enable Nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: yes

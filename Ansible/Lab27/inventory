@@ -1,0 +1,2 @@
+[my_nodes]
+localhost  ansible_connection=local ansible_become_password=aya

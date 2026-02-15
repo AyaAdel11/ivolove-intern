@@ -70,6 +70,6 @@ Execution: System disk space details were retrieved successfully through Ansible
 
 ![png](./screenshots/ping.png)
 
-![png](./screenshots/p.png)
+![png](./screenshots/pp.png)
 
 ---
