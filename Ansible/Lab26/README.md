@@ -13,7 +13,7 @@ SSH server running (sudo apt install openssh-server)
 ### 1. Project Directory Setup
 Created a dedicated directory for Ansible labs to keep the configuration organized.
 
-``Bash
+```Bash
 mkdir ansible-lab && cd ansible-lab
 ```
 
