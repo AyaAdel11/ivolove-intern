@@ -1,0 +1,19 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for roles/docker
+
+- name: Install Docker dependencies
+  apt:
+    name: [apt-transport-https, ca-certificates, curl, gnupg, lsb-release]
+    state: present
+
+- name: Install Docker Engine
+  apt:
+    name: docker.io
+    state: present
+
+- name: Ensure Docker is started
+  service:
+    name: docker
+    state: started
+    enabled: yes

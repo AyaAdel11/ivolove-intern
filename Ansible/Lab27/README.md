@@ -45,3 +45,5 @@ Service Check: Verified by accessing http://localhost via browser/curl.
 Output: The custom message "This page was deployed automatically by Ansible" is successfully displayed.
 
 ![png](./screenshots/var.png)
+
+![png](./screenshots/web.png)

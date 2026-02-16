@@ -1,0 +1,9 @@
+---
+- name: Deploy Infrastructure Roles
+  hosts: my_nodes
+  become: yes
+
+  roles:
+    - docker
+    - kubectl
+    - jenkins
