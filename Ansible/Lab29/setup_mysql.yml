@@ -1,0 +1,34 @@
+---
+- name: Install and Configure MySQL
+  hosts: my_nodes
+  become: yes
+  vars_files:
+    - secrets.yml  
+
+  tasks:
+    - name: Install MySQL server and Python dependencies
+      apt:
+        name: [mysql-server, python3-pymysql] 
+        state: present
+        update_cache: no
+
+    - name: Ensure MySQL is running
+      service:
+        name: mysql
+        state: started
+        enabled: yes
+
+    - name: Create iVolve database
+      mysql_db:
+        name: iVolve
+        state: present
+        login_unix_socket: /var/run/mysqld/mysqld.sock
+
+    - name: Create iVolve user with all privileges
+      mysql_user:
+        name: ivolve_user
+        password: "{{ db_password }}"  
+        priv: "iVolve.*:ALL"
+        state: present
+        host: "localhost"
+        login_unix_socket: /var/run/mysqld/mysqld.sock
